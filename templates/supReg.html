@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+h1 {
+font-family: Papyrus;
+font-weight: 600;
+font-size: 72px;
+color:#FFD100;
+text-align: center;
+}
+h3 {
+font-family: Courier New;
+color:#DAF7A6;
+text-decoration: underline;
+}
+button {
+background-color: #1a1a1a;
+border: none;
+color: white;
+padding: 10px 15px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+}
+.button123{
+background:url('https://i.stack.imgur.com/pMAiU.jpg');
+border: none;
+}
+body{
+font-family: Courier New;
+font-size:20px;
+background:url('https://i.stack.imgur.com/pMAiU.jpg');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+color:white;
+}
+</style>
+    <title>
+        Regression
+    </title>
+</head>
+<body>
+    <form method="post" action="/">
+        <button class="button123" type="submit"><h1>Assisted ML</h1></button>
+    </form>
+    <p>
+        <h3>Some Observations from the Dataset :-</h3>
+
+        <font color="black">
+                    <b>Column in the Dataset: </b>
+                </font>{{cna}} <br><br>
+        <font color="black">
+                    <b>Number of Datapoints in Dataset:  </b>
+                </font>{{ndd}} <br><br>
+        <font color="black">
+                    <b>Independant Variables with their respective datatypes: </b>
+                </font>{{ivwtrd}}<br><br>
+        <font color="black">
+                    <b>Dependant Variables with their respective datatypes: </b>
+                </font>{{dvwtrd}}
+
+        <br><br>
+
+        <h3>Metric used for NaN values in Dataset :-</h3>
+            <font color="black">
+                <b>
+                    The NaN values in the dataset have been filled with their Median(for case of a numerical column) and Mode(for case of categorical column).
+                </b>
+            </font>
+            <br>
+            <br>
+
+        <h3>Correlation Graph for the given Dataset :-</h3>
+        <img src="{{url_for('static', filename='images/Correlation_Graph.png')}}" class="center"><br>
+        <br><br>
+
+        <h3>Assisted ML Results :-</h3>
+        <font color="black">
+            <b>This type of problem can be solved using </b>
+        </font> <b>Supervised Regression Learning Algorithms</b>.<br>
+        <font color="black">
+            <b>Applied Machine Learning model is </b>
+        </font> <b>" Linear Regression ".</b><br>
+        <font color="black">
+            <b>RMSE Value: </b>
+        </font> <b>{{RMSE}}</b><br>
+        <font color="black">
+            <b>Accuracy Score: </b>
+        </font> <b>{{Accuracy}}</b><br><br>
+
+        <h3>Proceed for Predictions :-</h3>
+        <form action="/LnRsOutput" method="post" enctype="multipart/form-data">
+            <label for="lnrPred"><b>Enter any X array to be predicted: </b></label>
+            <input type="text" name="lnrPred">
+            <button type="submit">Submit</button>
+        </form>
+    </p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

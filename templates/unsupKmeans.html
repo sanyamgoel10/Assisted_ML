@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+h1 {
+font-family: Papyrus;
+font-weight: 600;
+font-size: 72px;
+color:#FFD100;
+text-align: center;
+}
+h3 {
+font-family: Courier New;
+color:#DAF7A6;
+text-decoration: underline;
+}
+button {
+background-color: #1a1a1a;
+border: none;
+color: white;
+padding: 10px 15px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+}
+.button123{
+background:url('https://i.stack.imgur.com/pMAiU.jpg');
+border: none;
+}
+body{
+font-family: Courier New;
+font-size:20px;
+background:url('https://i.stack.imgur.com/pMAiU.jpg');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+color:white;
+}
+</style>
+    <title>
+        K-Means Cluster Selection
+    </title>
+</head>
+<body>
+    <form method="post" action="/">
+        <button class="button123" type="submit"><h1>Assisted ML</h1></button>
+    </form>
+
+    <font color="black">
+                    <b>Number of clusters selected by you are </b>
+                </font>{{nCl}}<br><br>
+    <font color="black">
+                    <b>Result for K Means Clustering: </b>
+                </font>{{predictions}}<br><br>
+    <font color="black">
+                    <b>WCSS Error for the model is: </b>
+                </font>{{wcssError}}<br><br>
+
+    <h3>K-Means Clustering Predictions :-</h3>
+    <form action="/KMeansOutputPredictions" method="post" enctype="multipart/form-data">
+        <label for="kmeansUserInput"><b>Enter any test string to predict which cluster it occurs in: </b></label>
+        <input type="text" name="kmeansUserInput"><br>
+        <button type="submit">Submit</button>
+    </form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>
