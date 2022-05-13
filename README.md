@@ -4,7 +4,7 @@ The application automatically cleans the data as well, for example, handles NaN 
 Numerical and Categorical column types in dataset are automatically detected using some internal processes.<br><br>
 
 For Clustering, K-Means Clustering is used.<br>
-For Regression, Linear Regression iis used.<br>
+For Regression, Linear Regression is used.<br>
 For Clustering, Decision Tree and SVM are used and results are shown for better accuracy providing algorithm.
 
 ## Steps to Run:
